@@ -1,5 +1,5 @@
 # Musicplayer - Redefine the Music Player
-**A pretty UI&UX Music Player**
+**A pretty UI & UX Music Player**
 
 ## Features
 * Dark Theme Style with wallpaper as background
@@ -18,7 +18,7 @@ The app will be available in Google Play Store soon.
 Comming soon
 ```
 ### APK
-Download apk file here [Music player v1.3](https://github.com/mikrodinet/musicplayer/raw/master/musicr.apk)
+Download apk file here [Music Player](https://github.com/mikrodinet/musicplayer/raw/master/app/src/release/music.apk)
 
 
 # macOs
@@ -135,6 +135,7 @@ src="https://user-images.githubusercontent.com/33343210/61764970-4eb40180-ae05-1
 ## Authors
 
 * **Le Dinh Trung (ldt)** - *Initial work* - [Mikrodinet](https://github.com/Mikrodinet)
+* Officil Website [MIKRODINET](htttps://www.mikrodinet.eu.org)
 
 
 ### License
