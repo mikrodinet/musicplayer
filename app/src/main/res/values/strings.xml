@@ -323,4 +323,12 @@
     <string name="str_number_placeholder">%1$d</string>
     <string name="str_stop_play_preview">Stop play preview</string>
     <string name="str_error_general">Unknown error. Please try again later!</string>
+<string name="admob_app_id">ca-app-pub-6827901881006590~5030803588</string>
+<string name="ad_unit_id">ca-app-pub-6827901881006590/8165863697</string>
+<string name="ad_unit_id">ca-app-pub-3940256099942544/5224354917</string>
+   
+   <string name="admob_app_id">ca-app-pub-6827901881006590~5169075701</string>
+   <string name="ad_unit_id">ca-app-pub-6827901881006590/7447792677</string>
+   <string name="ad_unit_id">ca-app-pub-3940256099942544/6330618713</string>
+   
 </resources>
