@@ -11,6 +11,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+ 
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -100,7 +102,44 @@
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
-
+<!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://www.mikrodinet.eu.org) for more. -->
+<meta-data
+    android:name="com.google.firebase.messaging.default_notification_icon"
+    android:resource="@drawable/ic_stat_ic_notification" />
+<!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+     notification message. See README(https://www.mikrodinet.eu.org) for more. -->
+<meta-data
+    android:name="com.google.firebase.messaging.default_notification_color"
+    android:resource="@color/colorAccent" />
+    <meta-data
+    android:name="com.google.firebase.messaging.default_notification_channel_id"
+    android:value="@string/default_notification_channel_id" />
+    
+<!-- Sample AdMob App ID: ca-app-pub-6827901881006590~5030803588 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6827901881006590~5030803588"/>
+    <meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-6827901881006590~5030803588"/>
+    
+    <meta-data
+    android:name="com.google.android.gms.ads.APPLICATION_ID"
+    android:value="ca-app-pub-6827901881006590~5030803588"/>    
+    <meta-data
+    android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+    android:value="true"/>
+    <meta-data android:name="com.ldt.musicr" android:value="webview"></meta-data>
+    <meta-data android:name="eu.org.mikrodinet.app" android:value="webview"></meta-data>
+    <meta-data android:name="eu.org.mikrodinet.webview" android:value="webview"></meta-data>
+    <meta-data android:name="com.mikrodinet.app" android:value="ca-app-pub-6827901881006590~1120387899"></meta-data>
+    <meta-data android:name="eu.org.mikrodinet.app" android:value="ca-app-pub-6827901881006590~5169075701"></meta-data>
+    <meta-data android:name="eu.org.mikrodinet.webview" android:value="ca-app-pub-6827901881006590~5169075701">  
+    <meta-data android:name="AdColony" android:value="appca7de7d3c5b24ec6b9"></meta-data>
+    <meta-data android:name="com.google.android.gms.ads.INTEGRATION_MANAGER" android:value="webview"></meta-data>
+    <webview android:id="@+id/webview" android:layout_height="match_parent" android:layout_width="match_parent"></WebView>
+    
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}"
@@ -169,7 +208,27 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widget_card_info" />
         </receiver>
-
+<com.google.android.gms.ads.AdView
+   xmlns:ads="http://schemas.android.com/apk/res-auto"
+   android:id="@+id/adView"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_centerHorizontal="true"
+   android:layout_alignParentBottom="true"
+   ads:adSize="BANNER"
+   ads:adUnitId="ca-app-pub-6827901881006590/8165863697">
+   </com.google.android.gms.ads.AdView>
+        <com.google.android.gms.ads.AdView
+   xmlns:ads="http://schemas.android.com/apk/res-auto"
+   android:id="@+id/adView"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_centerHorizontal="true"
+   android:layout_alignParentBottom="true"
+   ads:adSize="BANNER"
+   ads:adUnitId="ca-app-pub-6827901881006590/7447792677">
+   </com.google.android.gms.ads.AdView>
+  
 
     </application>
 </manifest>
