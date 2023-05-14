@@ -1,4 +1,4 @@
-# Musicr - Redefine the Music Player
+# Musicplayer - Redefine the Music Player
 **A pretty UI&UX Music Player**
 
 ## Features
@@ -18,10 +18,77 @@ The app will be available in Google Play Store soon.
 Comming soon
 ```
 ### APK
-Download apk file here [Music player v1.3](https://github.com/dtrung98/Source/raw/master/musicr.apk)
+Download apk file here [Music player v1.3](https://github.com/mikrodinet/musicplayer/raw/master/musicr.apk)
+
+
+# macOs
+
+Download
 ```
-https://github.com/dtrung98/Source/raw/master/musicr.apk
+# Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-osx-x64-2.304.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.304.0/actions-runner-osx-x64-2.304.0.tar.gz# Optional: Validate the hash
+$ echo "26dddab8eafc193bb8b27afc5844ff3a6f789a655aca5bf79b018493963681a7  actions-runner-osx-x64-2.304.0.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-osx-x64-2.304.0.tar.gz
 ```
+Configure
+```
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/mikrodinet/musicplayer --token A3WZ3XVQXIPQPRMEJRM3DPLEMDZCA# Last step, run it!
+$ ./run.sh
+```
+Using your self-hosted runner
+```
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+```
+
+# Linux
+
+Download
+```
+# Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.304.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.304.0/actions-runner-linux-x64-2.304.0.tar.gz# Optional: Validate the hash
+$ echo "292e8770bdeafca135c2c06cd5426f9dda49a775568f45fcc25cc2b576afc12f  actions-runner-linux-x64-2.304.0.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.304.0.tar.gz
+```
+Configure
+```
+# Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/mikrodinet/musicplayer --token A3WZ3XRWA4XMQAYWQSQV6E3EMD4L4# Last step, run it!
+$ ./run.sh
+```
+Using your self-hosted runner
+```
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+```
+
+# Windows
+
+Download
+We recommend configuring the runner under "\actions-runner". This will help avoid issues related to service identity folder permissions and long path restrictions on Windows.
+```
+# Create a folder under the drive root
+$ mkdir actions-runner; cd actions-runner# Download the latest runner package
+$ Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.304.0/actions-runner-win-x64-2.304.0.zip -OutFile actions-runner-win-x64-2.304.0.zip# Optional: Validate the hash
+$ if((Get-FileHash -Path actions-runner-win-x64-2.304.0.zip -Algorithm SHA256).Hash.ToUpper() -ne 'fbbddd2f94b195dde46aa6028acfe873351964c502aa9f29bb64e529b789500b'.ToUpper()){ throw 'Computed checksum did not match' }# Extract the installer
+$ Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression.ZipFile]::ExtractToDirectory("$PWD/actions-runner-win-x64-2.304.0.zip", "$PWD")
+```
+Configure
+```
+# Create the runner and start the configuration experience
+$ ./config.cmd --url https://github.com/mikrodinet/musicplayer --token A3WZ3XRWA4XMQAYWQSQV6E3EMD4L4# Run it!
+$ ./run.cmd
+```
+Using your self-hosted runner
+```
+# Use this YAML in your workflow file for each job
+runs-on: self-hosted
+```
+
+
 ## Screenshots
 </br>
 <div align="center">
@@ -67,7 +134,7 @@ src="https://user-images.githubusercontent.com/33343210/61764970-4eb40180-ae05-1
 
 ## Authors
 
-* **Le Dinh Trung (ldt)** - *Initial work* - [dtrung98](https://github.com/dtrung98)
+* **Le Dinh Trung (ldt)** - *Initial work* - [Mikrodinet](https://github.com/Mikrodinet)
 
 
 ### License
